@@ -15,4 +15,4 @@ cl_gui_frontend_services=>gui_upload( EXPORTING filename = CONV #( files[ 1 ]-fi
 WRITE REDUCE i( LET mul = VALUE string_table( LET anzahl = count( val = concat_lines_of( input ) pcre = `mul\(\d+,\d+\)` ) IN FOR i = 1 UNTIL i > anzahl ( match( val = concat_lines_of( input ) pcre = `mul\(\d+,\d+\)` occ = i ) ) ) IN
                 INIT sum = 0
                 FOR <wa> IN mul
-                NEXT sum += EXACT #( match( val = <wa> pcre = `\d+` occ = 1 ) ) * EXACT #( match( val = <wa> pcre = `\d+` occ = 2 ) ) )..
+                NEXT sum += EXACT #( match( val = <wa> pcre = `\d+` occ = 1 ) ) * EXACT #( match( val = <wa> pcre = `\d+` occ = 2 ) ) )...
